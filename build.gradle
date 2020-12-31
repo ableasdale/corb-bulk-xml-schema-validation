@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.marklogic:marklogic-corb:2.5.0'
+    }
+}
+
+plugins {
+    id 'java'
+    id "com.marklogic.ml-gradle" version "4.1.1"
+}
+
+group 'com.marklogic.support'
+version '1.0-SNAPSHOT'
+
+ext {
+    def forest=""
+}
+
+configurations {
+    corb
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    corb 'com.marklogic:marklogic-corb:2.5.0'
+    corb 'com.marklogic:marklogic-xcc:10.0.5'
+}
+
+task runCorb(type: com.marklogic.gradle.task.CorbTask) {
+    optionsFile='job.properties'
+}
