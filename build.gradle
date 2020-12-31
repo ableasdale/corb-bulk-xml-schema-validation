@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.marklogic:marklogic-corb:2.5.0'
+        classpath 'com.marklogic:marklogic-corb:2.4.6'
     }
 }
 
@@ -28,7 +28,7 @@ repositories {
 }
 
 dependencies {
-    corb 'com.marklogic:marklogic-corb:2.5.0'
+    corb 'com.marklogic:marklogic-corb:2.4.6'
     corb 'com.marklogic:marklogic-xcc:10.0.5'
 }
 
